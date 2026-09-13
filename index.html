@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Gina Sims Gastroenterologist: Digestive Health Guide</title>
+<meta name="description" content="A complete guide to gastroenterology care — what a gastroenterologist treats, when to seek care, what to expect at a consultation, and FAQs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-950:#0b2b30;
+    --teal-900:#0f3a40;
+    --teal-800:#164e56;
+    --teal-100:#e5f1f0;
+    --sage-500:#5fa88f;
+    --sage-600:#4a8c74;
+    --coral-500:#e0785f;
+    --paper:#f6f7f4;
+    --card:#ffffff;
+    --ink:#182321;
+    --ink-soft:#54615d;
+    --line:#dde5e1;
+    --radius:14px;
+    --shadow:0 10px 30px -12px rgba(11,43,48,0.16);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; font-family:'Inter',system-ui,sans-serif; color:var(--ink); background:var(--paper); line-height:1.7; -webkit-font-smoothing:antialiased;}
+  a{color:inherit;}
+  h1,h2,h3,h4{font-family:'Source Serif 4',serif; margin:0 0 .5em 0; letter-spacing:-0.01em; color:var(--teal-950);}
+  .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--sage-600); font-weight:600; display:inline-flex; align-items:center; gap:.5em; margin-bottom:.9em;}
+  .eyebrow::before{content:"";width:22px;height:2px;background:var(--sage-500);display:inline-block;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 28px;}
+  .link-inline{color:var(--teal-950); font-weight:700; text-decoration:none; border-bottom:2px solid var(--sage-500); padding-bottom:1px; transition:color .15s ease, border-color .15s ease;}
+  .link-inline:hover{color:var(--sage-600); border-color:var(--teal-950);}
+
+  /* HEADER */
+  header{position:sticky; top:0; z-index:50; background:rgba(11,43,48,0.97); backdrop-filter:blur(8px); border-bottom:1px solid rgba(95,168,143,0.3);}
+  .nav-row{display:flex; align-items:center; justify-content:space-between; padding:16px 28px; max-width:1160px; margin:0 auto; gap:20px; flex-wrap:nowrap;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:'Source Serif 4',serif; font-weight:700; font-size:1.1rem; color:#fff; text-decoration:none; white-space:nowrap;}
+  .brand .mark{width:32px; height:32px; border-radius:8px; background:linear-gradient(140deg,var(--sage-500),var(--sage-600)); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-weight:700; color:#fff; font-size:.72rem;}
+  nav.links{display:flex; gap:18px; align-items:center; flex-wrap:wrap;}
+  nav.links a{color:#e4ede9; text-decoration:none; font-size:.8rem; font-weight:500; opacity:.85; transition:opacity .15s ease;}
+  nav.links a:hover{opacity:1;}
+  .nav-cta{background:linear-gradient(120deg,var(--sage-500),var(--sage-600)); color:#fff!important; opacity:1!important; padding:9px 18px; border-radius:999px; font-weight:700!important; font-size:.8rem!important; white-space:nowrap;}
+  .nav-cta:hover{filter:brightness(1.06);}
+  @media (max-width:1060px){ nav.links{display:none;} }
+
+  /* HERO */
+  .hero{background:radial-gradient(1100px 500px at 85% -10%, rgba(95,168,143,0.2), transparent 60%), linear-gradient(180deg,var(--teal-950) 0%, var(--teal-900) 100%); color:#fff; padding:76px 0 58px; position:relative; overflow:hidden;}
+  .hero .wrap{display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center;}
+  .hero h1{color:#fff; font-size:clamp(1.85rem,3.2vw,2.55rem); line-height:1.16; font-weight:600;}
+  .hero p.lede{font-size:1.02rem; color:#dbe6e2; max-width:60ch;}
+  .hero .eyebrow{color:var(--sage-500);}
+  .hero .link-inline{color:#fff; border-bottom-color:var(--sage-500);}
+  .hero .link-inline:hover{color:var(--sage-500); border-bottom-color:#fff;}
+  .hero-actions{display:flex; gap:14px; margin-top:26px; flex-wrap:wrap;}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:13px 22px; border-radius:999px; font-weight:700; font-size:.9rem; text-decoration:none; transition:transform .15s ease, box-shadow .15s ease;}
+  .btn-sage{background:linear-gradient(120deg,var(--sage-500),var(--sage-600)); color:#fff;}
+  .btn-sage:hover{transform:translateY(-2px); box-shadow:0 10px 22px -8px rgba(95,168,143,0.5);}
+  .btn-ghost{border:1.5px solid rgba(255,255,255,0.35); color:#fff;}
+  .btn-ghost:hover{border-color:#fff; transform:translateY(-2px);}
+
+  .side-card{background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.15); border-radius:var(--radius); padding:26px 24px;}
+  .side-card h4{color:#fff; font-size:.9rem; font-family:'IBM Plex Mono',monospace; letter-spacing:.04em; text-transform:uppercase; margin-bottom:18px; font-weight:600;}
+  .mini-row{display:flex; gap:12px; padding:10px 0; border-top:1px dashed rgba(255,255,255,0.14); font-size:.85rem; color:#dbe6e2;}
+  .mini-row:first-of-type{border-top:none;}
+  .mini-dot{flex:0 0 auto; width:8px; height:8px; margin-top:6px; border-radius:50%; background:var(--sage-500);}
+  @media (max-width:900px){ .hero .wrap{grid-template-columns:1fr;} }
+
+  /* SECTIONS */
+  section{padding:54px 0;}
+  section.alt{background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  h2{font-size:clamp(1.35rem,2.1vw,1.85rem); font-weight:600;}
+  h3.subhead{font-size:1.08rem; color:var(--teal-800); margin-top:1.5em;}
+  .section-head{max-width:78ch; margin-bottom:24px;}
+  .section-head p{color:var(--ink-soft); font-size:1.01rem;}
+  .prose{max-width:78ch; color:var(--ink-soft); font-size:1rem;}
+  .prose p{margin:0 0 1.05em 0;}
+  .prose strong{color:var(--ink);}
+  .prose ul{padding-left:1.2em;}
+  .prose ul li{margin-bottom:.4em;}
+
+  .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+  @media (max-width:800px){ .grid-2{grid-template-columns:1fr;} .grid-3{grid-template-columns:1fr;} }
+
+  .card{background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:24px 22px; box-shadow:var(--shadow);}
+  .card h3{font-size:1.02rem; color:var(--teal-950); margin-bottom:8px;}
+  .card p{color:var(--ink-soft); font-size:.93rem; margin:0;}
+  .tag{font-family:'IBM Plex Mono',monospace; font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; color:var(--sage-600); font-weight:600; display:inline-block; margin-bottom:10px;}
+
+  .callout{background:var(--teal-100); border-left:4px solid var(--teal-800); border-radius:0 10px 10px 0; padding:20px 22px; margin:24px 0; font-size:.97rem; color:var(--teal-950);}
+  .warn{background:#fdf0ec; border-left:4px solid var(--coral-500); border-radius:0 10px 10px 0; padding:20px 22px; margin:24px 0; font-size:.97rem; color:#8a3c28;}
+
+  table.data{width:100%; border-collapse:collapse; background:var(--card); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow);}
+  table.data thead th{background:var(--teal-950); color:#fff; text-align:left; padding:14px 18px; font-family:'IBM Plex Mono',monospace; font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; font-weight:600;}
+  table.data td{padding:13px 18px; border-bottom:1px solid var(--line); font-size:.92rem; vertical-align:top;}
+  table.data tr:last-child td{border-bottom:none;}
+  table.data td.label{font-weight:700; color:var(--teal-950); white-space:nowrap;}
+  table.data tbody tr:nth-child(even){background:#f9faf7;}
+
+  .steps{display:grid; gap:10px;}
+  .step-row{display:flex; gap:12px; align-items:flex-start; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 18px;}
+  .step-row .bullet{flex:0 0 auto; width:22px; height:22px; margin-top:2px; border-radius:50%; background:var(--sage-500); color:#fff; font-family:'IBM Plex Mono',monospace; font-size:.7rem; font-weight:700; display:flex; align-items:center; justify-content:center;}
+  .step-row p{margin:0; font-size:.93rem; color:var(--ink-soft);}
+
+  .faq{border:1px solid var(--line); border-radius:var(--radius); background:var(--card); overflow:hidden; box-shadow:var(--shadow);}
+  .faq-item{border-bottom:1px solid var(--line); padding:20px 24px;}
+  .faq-item:last-child{border-bottom:none;}
+  .faq-item h3{font-size:.98rem; color:var(--teal-950); margin-bottom:6px;}
+  .faq-item p{color:var(--ink-soft); font-size:.92rem; margin:0;}
+
+  .cta-band{background:linear-gradient(120deg,var(--teal-950),var(--teal-800)); color:#fff; border-radius:20px; padding:42px 38px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+  .cta-band h3{color:#fff; margin-bottom:6px; font-size:1.35rem;}
+  .cta-band p{margin:0; color:#dbe6e2; font-size:.94rem;}
+
+  .divider{height:1px; background:var(--line); margin:52px 0 0;}
+
+  footer{background:var(--teal-950); color:#b9c7c3; padding:52px 0 24px; margin-top:20px; border-top:3px solid; border-image:linear-gradient(90deg,var(--sage-500),var(--coral-500)) 1;}
+  .footer-grid{display:grid; grid-template-columns:1.5fr 1fr 1fr 1fr; gap:36px; padding-bottom:34px; border-bottom:1px solid rgba(255,255,255,0.12);}
+  .footer-brand{display:flex; align-items:center; gap:10px; font-family:'Source Serif 4',serif; font-weight:700; color:#fff; font-size:1.08rem; margin-bottom:12px;}
+  footer h5{color:#fff; font-size:.76rem; letter-spacing:.1em; text-transform:uppercase; font-family:'IBM Plex Mono',monospace; margin-bottom:16px;}
+  footer ul{list-style:none; margin:0; padding:0;}
+  footer ul li{margin-bottom:10px;}
+  footer ul li a{color:#b9c7c3; text-decoration:none; font-size:.89rem; opacity:.9;}
+  footer ul li a:hover{opacity:1; color:var(--sage-500);}
+  .social-row{display:flex; gap:12px; margin-top:10px;}
+  .social-row a{width:38px; height:38px; border-radius:50%; border:1px solid rgba(255,255,255,0.2); display:flex; align-items:center; justify-content:center; color:#fff; transition:all .15s ease; text-decoration:none; font-size:.76rem; font-family:'IBM Plex Mono',monospace;}
+  .social-row a:hover{background:linear-gradient(120deg,var(--sage-500),var(--coral-500)); border-color:transparent; color:#fff;}
+  .footer-bottom{display:flex; justify-content:space-between; align-items:center; padding-top:22px; font-size:.81rem; color:#7f8f8a; flex-wrap:wrap; gap:10px;}
+  @media (max-width:900px){ .footer-grid{grid-template-columns:1fr 1fr; gap:28px;} }
+  @media (max-width:560px){ .footer-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-row">
+    <a href="#" class="brand"><span class="mark">GI</span>Digestive Health Guide</a>
+    <nav class="links">
+      <a href="#what-does">What They Treat</a>
+      <a href="#when">When to See One</a>
+      <a href="#appointment">Appointment</a>
+      <a href="#procedures">Procedures</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://drginasam.net/" class="nav-cta">Learn More</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO / INTRO ================= -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Gastroenterology · Digestive Health</span>
+      <h1>Dr. Gina Sims Gastroenterologist: Digestive Health Guide</h1>
+      <p class="lede">Digestive health plays an important role in overall well-being, yet many people ignore symptoms such as persistent stomach discomfort, bloating, changes in bowel habits, acid reflux, or unexplained digestive problems until they begin affecting daily life. A gastroenterologist is a medical specialist who focuses on the digestive system and helps patients understand, diagnose, and manage conditions involving the gastrointestinal tract.</p>
+      <p class="lede">People searching for <a href="https://drginasam.net/" class="link-inline">Dr. Gina Sims gastroenterologist</a> may be looking for information about gastroenterology care, digestive symptoms, specialist consultations, diagnostic procedures, or what to expect when visiting a gastrointestinal doctor.</p>
+      <p class="lede">Understanding the role of a gastroenterologist can make it easier to recognize when professional evaluation may be appropriate and what types of digestive concerns should not be ignored.</p>
+      <div class="hero-actions">
+        <a href="https://drginasam.net/" class="btn btn-sage">Learn More →</a>
+        <a href="#when" class="btn btn-ghost">When to see a specialist</a>
+      </div>
+    </div>
+    <div class="side-card">
+      <h4>In This Guide</h4>
+      <div class="mini-row"><span class="mini-dot"></span><span>What a gastroenterologist treats</span></div>
+      <div class="mini-row"><span class="mini-dot"></span><span>When to seek specialist care</span></div>
+      <div class="mini-row"><span class="mini-dot"></span><span>What to expect at a consultation</span></div>
+      <div class="mini-row"><span class="mini-dot"></span><span>Diagnostic procedures &amp; colonoscopy</span></div>
+      <div class="mini-row"><span class="mini-dot"></span><span>Questions to ask &amp; how to prepare</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT DOES A GASTROENTEROLOGIST DO ================= -->
+<section id="what-does">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What Does a Gastroenterologist Do?</span>
+      <h2>What Does a Gastroenterologist Do?</h2>
+    </div>
+    <div class="prose">
+      <p>A gastroenterologist specializes in the digestive system. This includes organs and structures involved in digestion, nutrient absorption, and waste elimination.</p>
+      <p>Depending on a patient's symptoms and medical history, a gastroenterologist may evaluate problems involving the esophagus, stomach, small intestine, large intestine and colon, rectum, liver, gallbladder, and pancreas.</p>
+      <p>Digestive symptoms can have many possible causes. A specialist evaluates the overall picture rather than focusing on a single symptom in isolation.</p>
+
+      <h3 class="subhead">Why People Search for Dr. Gina Sims Gastroenterologist</h3>
+      <p>When someone searches for Dr. Gina Sims gastroenterologist, they may already be experiencing digestive symptoms or looking for a specialist who can evaluate a gastrointestinal concern.</p>
+      <p>Online searches for a doctor commonly involve questions about areas of specialization, appointment expectations, conditions treated, diagnostic testing, and how to prepare for a consultation.</p>
+      <p>It is important to verify current professional information directly through an official medical practice, hospital, or healthcare directory before making decisions about a specific physician.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMMON DIGESTIVE PROBLEMS TABLE ================= -->
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Common Digestive Problems Evaluated by Gastroenterologists</span>
+      <h2>Common Digestive Problems Evaluated by Gastroenterologists</h2>
+      <p>Gastroenterology covers a broad range of conditions. Some are temporary and relatively mild, while others require ongoing medical management. Common concerns that may lead someone to a gastroenterologist include acid reflux, persistent abdominal pain, constipation, diarrhea, bloating, inflammatory bowel conditions, gastrointestinal bleeding, and problems involving the liver or gallbladder.</p>
+    </div>
+    <table class="data">
+      <thead><tr><th>Digestive Concern</th><th>What a Gastroenterologist May Evaluate</th></tr></thead>
+      <tbody>
+        <tr><td class="label">Acid reflux</td><td>Reflux symptoms and possible esophageal irritation</td></tr>
+        <tr><td class="label">Abdominal pain</td><td>Potential gastrointestinal causes</td></tr>
+        <tr><td class="label">Bloating</td><td>Digestive disorders, food-related causes, and intestinal issues</td></tr>
+        <tr><td class="label">Constipation</td><td>Bowel function and underlying causes</td></tr>
+        <tr><td class="label">Persistent diarrhea</td><td>Infection, inflammation, intolerance, or other conditions</td></tr>
+        <tr><td class="label">Rectal bleeding</td><td>Possible sources of gastrointestinal bleeding</td></tr>
+        <tr><td class="label">Liver concerns</td><td>Liver function and related disorders</td></tr>
+        <tr><td class="label">Gallbladder problems</td><td>Symptoms associated with gallstones or inflammation</td></tr>
+        <tr><td class="label">Colon concerns</td><td>Bowel symptoms and colorectal conditions</td></tr>
+      </tbody>
+    </table>
+    <div class="callout">This information is general and does not mean that a particular symptom has a specific diagnosis.</div>
+  </div>
+</section>
+
+<!-- ================= WHEN TO CONSIDER A GASTROENTEROLOGIST ================= -->
+<section id="when">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">When Should You Consider a Gastroenterologist?</span>
+      <h2>When Should You Consider a Gastroenterologist?</h2>
+    </div>
+    <div class="prose">
+      <p>Not every stomach problem requires a specialist. Occasional digestive discomfort can happen for many ordinary reasons.</p>
+      <p>However, persistent, recurring, worsening, or unexplained symptoms may deserve professional evaluation. A primary care physician may initially assess the problem and recommend a gastroenterology referral when specialist care or testing is appropriate.</p>
+      <p>Symptoms that may warrant medical attention include ongoing abdominal discomfort, persistent changes in bowel habits, difficulty swallowing, repeated heartburn, unexplained weight changes, blood in the stool, or digestive symptoms that interfere with normal activities.</p>
+    </div>
+    <div class="warn">Severe symptoms such as significant bleeding, severe abdominal pain, fainting, or other emergency warning signs require prompt medical attention rather than waiting for a routine appointment.</div>
+  </div>
+</section>
+
+<!-- ================= CONSULTATION / PREPARING ================= -->
+<section class="alt" id="appointment">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What Happens During a Consultation?</span>
+      <h2>What Happens During a Gastroenterology Consultation?</h2>
+      <div class="prose">
+        <p>A first appointment usually begins with a discussion of symptoms and medical history.</p>
+        <p>The doctor may ask questions about when symptoms began, how often they occur, what makes them better or worse, medications being taken, previous diagnoses, family history, and lifestyle factors.</p>
+        <p>Depending on the situation, the doctor may perform a physical examination and determine whether additional testing is appropriate. Possible diagnostic approaches can vary considerably from one patient to another. The purpose of testing is to gather enough information to understand the underlying problem and develop an appropriate care plan.</p>
+      </div>
+    </div>
+
+    <h3 class="subhead">Preparing for an Appointment</h3>
+    <p class="prose">Patients can make a consultation more productive by preparing some basic information beforehand. Write down when symptoms started and whether they occur daily or occasionally. It can also be helpful to record foods or situations that appear to trigger symptoms. Bring a current list of medications and supplements, along with information about previous medical tests or diagnoses when available. Useful information to discuss may include:</p>
+    <div class="steps">
+      <div class="step-row"><span class="bullet">✓</span><p>Main symptoms and when they started.</p></div>
+      <div class="step-row"><span class="bullet">✓</span><p>Changes in frequency or severity.</p></div>
+      <div class="step-row"><span class="bullet">✓</span><p>Current medications and supplements.</p></div>
+      <div class="step-row"><span class="bullet">✓</span><p>Previous digestive problems.</p></div>
+      <div class="step-row"><span class="bullet">✓</span><p>Relevant family medical history.</p></div>
+      <div class="step-row"><span class="bullet">✓</span><p>Previous procedures or test results.</p></div>
+      <div class="step-row"><span class="bullet">✓</span><p>Questions about recommended next steps.</p></div>
+    </div>
+    <div class="callout" style="margin-top:20px;">Good communication gives the specialist a clearer picture of the problem.</div>
+  </div>
+</section>
+
+<!-- ================= DIAGNOSTIC PROCEDURES / COLONOSCOPY ================= -->
+<section id="procedures">
+  <div class="wrap">
+    <div class="grid-2">
+      <div>
+        <span class="eyebrow">Testing</span>
+        <h2 style="font-size:1.4rem;">Gastrointestinal Diagnostic Procedures</h2>
+        <div class="prose" style="max-width:60ch;">
+          <p>Gastroenterologists have access to different diagnostic tools. The appropriate procedure depends on the symptoms, medical history, age, risk factors, and clinical findings.</p>
+          <p>One well-known procedure is an endoscopy, which allows a doctor to examine the upper digestive tract. Colonoscopy is another important procedure used to examine the colon. Other tests may include laboratory work, imaging studies, stool testing, or specialized gastrointestinal tests.</p>
+          <p>Patients should always receive procedure-specific instructions from their healthcare provider because preparation requirements vary.</p>
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">A Closer Look</span>
+        <h2 style="font-size:1.4rem;">Understanding Colonoscopy</h2>
+        <div class="prose" style="max-width:60ch;">
+          <p>Colonoscopy is an important gastroenterology procedure that allows a physician to examine the inside of the colon using a flexible camera.</p>
+          <p>It may be recommended for colorectal cancer screening, investigation of certain symptoms, or monitoring particular gastrointestinal conditions.</p>
+          <p>Preparation is an important part of the process. Patients generally receive detailed instructions about diet, bowel preparation, medications, and appointment timing. Because individual circumstances differ, patients should follow the instructions supplied by their healthcare team rather than relying on generic preparation advice found online.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DIGESTIVE HEALTH AND DAILY HABITS ================= -->
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Digestive Health and Daily Habits</span>
+      <h2>Digestive Health and Daily Habits</h2>
+    </div>
+    <div class="prose">
+      <p>Medical care is only one part of digestive health. Everyday habits can also influence how people feel.</p>
+      <p>A balanced diet, adequate hydration, regular physical activity, sufficient sleep, and appropriate stress management can support general health.</p>
+      <p>However, lifestyle changes should not be used as a substitute for medical evaluation when symptoms are persistent or concerning. A person experiencing ongoing digestive problems should discuss those symptoms with a qualified healthcare professional rather than assuming they are caused by diet alone.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUESTIONS TO ASK ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Questions to Ask a Gastroenterologist</span>
+      <h2>Questions to Ask a Gastroenterologist</h2>
+      <p>Patients sometimes leave a medical appointment without asking important questions because they are unsure what to discuss. Consider asking:</p>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <p style="margin-bottom:8px;">What could be causing my symptoms?</p>
+        <p style="margin-bottom:8px;">Do I need additional testing?</p>
+        <p style="margin-bottom:8px;">What does the recommended test involve?</p>
+        <p style="margin-bottom:0;">How should I prepare?</p>
+      </div>
+      <div class="card">
+        <p style="margin-bottom:8px;">Are there lifestyle changes that may help?</p>
+        <p style="margin-bottom:8px;">How long should I monitor my symptoms?</p>
+        <p style="margin-bottom:8px;">Which symptoms would require urgent medical attention?</p>
+        <p style="margin-bottom:0;">When should I return for follow-up?</p>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:22px;">Writing questions down before the appointment can make the conversation easier.</div>
+  </div>
+</section>
+
+<!-- ================= CHOOSING A GASTROENTEROLOGIST / ACCURATE INFO ================= -->
+<section class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Choosing a Gastroenterologist</span>
+      <h2>Choosing a Gastroenterologist</h2>
+      <div class="prose">
+        <p>When researching Dr. Gina Sims gastroenterologist or any other digestive health specialist, patients should evaluate information from reliable sources.</p>
+        <p>Look for current professional credentials, specialty information, affiliated healthcare organizations, location, accepted insurance where applicable, appointment procedures, and patient-care information from authoritative sources.</p>
+        <p>Online reviews may provide insight into other patients' experiences, but reviews should not replace verified medical credentials or professional information. It is also important to confirm that the information is current because physicians can change practices, affiliations, or appointment arrangements.</p>
+
+        <h3 class="subhead">The Importance of Accurate Medical Information</h3>
+        <p>Digestive symptoms can overlap across many different conditions. For example, abdominal discomfort may have numerous possible causes, while changes in bowel habits can result from temporary problems or more significant conditions.</p>
+        <p>This is why online information should be used for education rather than self-diagnosis. A qualified healthcare professional can consider the complete medical history, perform appropriate examinations, and decide whether testing or treatment is necessary.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PATIENT-DOCTOR RELATIONSHIP ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">What Makes a Good Patient-Doctor Relationship?</span>
+      <h2>What Makes a Good Patient-Doctor Relationship?</h2>
+    </div>
+    <div class="prose">
+      <p>Effective healthcare depends on communication.</p>
+      <p>Patients should feel comfortable explaining symptoms honestly, asking questions, discussing concerns about procedures, and telling the doctor about medications or supplements they use.</p>
+      <p>A good consultation is not simply about receiving instructions. It is an opportunity for the patient and healthcare professional to understand the problem together and decide on appropriate next steps.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA BAND ================= -->
+<section class="alt">
+  <div class="wrap">
+    <div class="cta-band">
+      <div>
+        <h3>Considering a gastroenterology consultation?</h3>
+        <p>Verify current credentials, specialty, and appointment details before booking.</p>
+      </div>
+      <a href="https://drginasam.net/" class="btn btn-sage">Learn More →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONCLUSION ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Conclusion</span>
+      <h2>Conclusion</h2>
+      <div class="prose" style="max-width:78ch;">
+        <p>Searching for Dr. Gina Sims gastroenterologist may be the beginning of a journey toward better understanding of digestive health. Gastroenterologists play an important role in evaluating problems affecting the stomach, intestines, esophagus, liver, gallbladder, pancreas, and other parts of the digestive system.</p>
+        <p>Whether someone is dealing with recurring heartburn, abdominal discomfort, bowel changes, or another gastrointestinal concern, professional evaluation can help determine what is happening and whether further testing is needed.</p>
+        <p>Anyone researching a specific physician should verify current credentials, practice information, services, and appointment details through reliable healthcare sources. Most importantly, persistent or concerning digestive symptoms should not be ignored or diagnosed solely through online searches.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="alt" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Frequently Asked Questions</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item">
+        <h3>Who is Dr. Gina Sims?</h3>
+        <p>Dr. Gina Sims is searched online in connection with gastroenterology. Anyone considering an appointment should verify the physician's current credentials, specialty, practice location, and affiliations through an authoritative medical or healthcare source.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What does a gastroenterologist treat?</h3>
+        <p>A gastroenterologist evaluates conditions involving the digestive system, including the esophagus, stomach, intestines, colon, liver, gallbladder, and pancreas.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When should I see a gastroenterologist?</h3>
+        <p>Persistent or recurring digestive symptoms, unexplained changes in bowel habits, ongoing reflux, difficulty swallowing, gastrointestinal bleeding, or other concerning symptoms may require medical evaluation.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What should I bring to a gastroenterology appointment?</h3>
+        <p>Bring a list of current medications and supplements, previous test results when available, information about relevant medical history, and a written description of your symptoms.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What happens at a first gastroenterology visit?</h3>
+        <p>The appointment generally involves discussing symptoms and medical history. Depending on the situation, the physician may perform an examination and recommend additional testing.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do gastroenterologists perform colonoscopies?</h3>
+        <p>Many gastroenterologists perform colonoscopies and other endoscopic procedures. Whether a particular doctor offers a specific procedure should be confirmed with the doctor's current practice.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How should I prepare for a colonoscopy?</h3>
+        <p>Preparation varies depending on the medical practice and individual circumstances. Patients should follow the exact bowel-preparation, diet, medication, and timing instructions provided by their healthcare team.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can diet cause digestive problems?</h3>
+        <p>Diet can influence digestive symptoms, but persistent symptoms can have many possible causes. It is better to discuss ongoing problems with a qualified healthcare professional instead of assuming that food is the only cause.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is abdominal pain always a gastrointestinal problem?</h3>
+        <p>No. Abdominal pain can have many different causes. A healthcare professional can evaluate the symptoms and determine whether gastrointestinal testing or another type of medical assessment is appropriate.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How can I verify information about Dr. Gina Sims?</h3>
+        <p>Use an official healthcare practice, hospital system, medical organization, or reputable physician directory to confirm current specialty, credentials, location, affiliations, and appointment information.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Should I rely on online information to diagnose digestive symptoms?</h3>
+        <p>No. Online content can provide general education, but it cannot replace an examination and individualized medical advice from a qualified healthcare professional.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When is digestive bleeding an emergency?</h3>
+        <p>Significant or unexplained gastrointestinal bleeding can require urgent medical attention, particularly when accompanied by severe pain, weakness, dizziness,<a href="https://charrybloom7-collab.github.io/CSMChapter/">Dr. Gina Sims</a> fainting, or other concerning symptoms. In an emergency, seek immediate medical care rather than waiting for a routine appointment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><span class="mark" style="background:linear-gradient(140deg,var(--sage-500),var(--sage-600)); width:32px; height:32px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-weight:700; color:#fff; font-size:.72rem;">GI</span>Digestive Health Guide</div>
+        <p style="font-size:.89rem; color:#7f8f8a; max-width:36ch;">Independent, educational information about gastroenterology and digestive health. Not a substitute for professional medical advice.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="YouTube">yt</a>
+        </div>
+      </div>
+      <div>
+        <h5>Guide</h5>
+        <ul>
+          <li><a href="#what-does">What They Treat</a></li>
+          <li><a href="#when">When to See One</a></li>
+          <li><a href="#appointment">Appointment</a></li>
+          <li><a href="#procedures">Procedures</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Learn More</h5>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="https://drginasam.net/">Dr. Gina Sims Gastroenterologist</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Digestive Health Guide. Educational resource only.</span>
+      <span>Not medical advice. Always consult a qualified healthcare professional.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
